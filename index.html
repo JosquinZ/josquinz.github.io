@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wade VR | Demo available on the Meta Quest Store</title>
+    <style>
+        /* 1. Reset and No-Scroll */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body, html {
+            height: 100%;
+            width: 100%;
+            overflow: hidden; /* Removes scroll bars */
+            font-family: 'Inter', sans-serif, system-ui;
+            color: white;
+        }
+
+        /* 2. Background Video */
+        #bg-video {
+            position: fixed;
+            right: 0;
+            bottom: 0;
+            min-width: 100%;
+            min-height: 100%;
+            object-fit: cover;
+            z-index: -1;
+            filter: brightness(50%); /* Dims video so text is readable */
+        }
+
+        /* 3. Content Layout */
+        .container {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            background: rgba(0, 0, 0, 0.2); /* Extra overlay tint */
+        }
+
+        .logo {
+            max-width: 400px;
+            width: 80vw;
+            height: auto;
+            margin-bottom: 20px;
+            filter: drop-shadow(0 5px 15px rgba(0,0,0,0.5));
+        }
+
+        /* 4. Social Links */
+        .links {
+            display: flex;
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .btn {
+            padding: 12px 24px;
+            border: 2px solid white;
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            text-transform: uppercase;
+            transition: all 0.3s ease;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(5px);
+        }
+
+        .btn:hover {
+            background: white;
+            color: black;
+            transform: translateY(-3px);
+        }
+
+        /* Optional: Wishlist Button (Main CTA) */
+        .cta {
+            background: #ff4b2b; /* Change to your game's primary color */
+            border-color: #ff4b2b;
+        }
+
+        .cta:hover {
+            background: #ff416c;
+            border-color: #ff416c;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+    <video autoplay muted loop playsinline id="bg-video">
+        <source src="background.mp4" type="video/mp4">
+    </video>
+
+    <div class="container">
+        <img src="title.png" alt="WADE" class="logo">
+        <p>A Fly Fishing VR Experience.</p>
+
+        <div class="links">
+            <a href="#" class="btn cta">Wishlist on Steam</a>
+            <a href="#" class="btn cta">Meta Quest Store</a>
+            <a href="#" class="btn">TikTok</a>
+            <a href="#" class="btn">Discord</a>
+        </div>
+    </div>
+
+</body>
+</html>
