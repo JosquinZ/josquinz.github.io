@@ -5,17 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Wade VR | Demo available on the Meta Quest Store</title>
     <style>
-        /* 1. Reset and No-Scroll */
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body, html {
             height: 100%;
             width: 100%;
-            overflow: hidden; /* Removes scroll bars */
+            overflow: hidden; 
             font-family: 'Inter', sans-serif, system-ui;
             color: white;
         }
 
-        /* 2. Background Video */
+
         #bg-video {
             position: fixed;
             right: 0;
@@ -24,10 +23,9 @@
             min-height: 100%;
             object-fit: cover;
             z-index: -1;
-            filter: brightness(50%); /* Dims video so text is readable */
+            filter: brightness(50%); 
         }
 
-        /* 3. Content Layout */
         .container {
             height: 100vh;
             display: flex;
@@ -35,7 +33,7 @@
             justify-content: center;
             align-items: center;
             text-align: center;
-            background: rgba(0, 0, 0, 0.2); /* Extra overlay tint */
+            background: rgba(0, 0, 0, 0.2); 
         }
 
         .logo {
@@ -46,7 +44,6 @@
             filter: drop-shadow(0 5px 15px rgba(0,0,0,0.5));
         }
 
-        /* 4. Social Links */
         .links {
             display: flex;
             gap: 20px;
@@ -71,9 +68,8 @@
             transform: translateY(-3px);
         }
 
-        /* Optional: Wishlist Button (Main CTA) */
         .cta {
-            background: #ff4b2b; /* Change to your game's primary color */
+            background: #ff4b2b;
             border-color: #ff4b2b;
         }
 
@@ -82,9 +78,31 @@
             border-color: #ff416c;
             color: white;
         }
+
+        .corner-banner {
+            position: fixed;
+            top: 40px;
+            right: -65px;
+            background: linear-gradient(135deg, #ff4b2b, #ff416c);
+            color: white;
+            padding: 25px 65px;
+            transform: rotate(45deg);
+            font-weight: bold;
+            text-transform: uppercase;
+            font-size: 13px;
+            letter-spacing: 2px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            z-index: 1000;
+        }
+
+        body {
+            overflow-x: hidden;
+        }
     </style>
 </head>
 <body>
+
+    <div class="corner-banner">Demo Available!</div>
 
     <video autoplay muted loop playsinline id="bg-video">
         <source src="Background.mp4" type="video/mp4">
@@ -97,8 +115,8 @@
         <div class="links">
             <a href="#" class="btn cta">Wishlist on Steam</a>
             <a href="#" class="btn cta">Meta Quest Store</a>
-            <a href="#" class="btn">TikTok</a>
-            <a href="#" class="btn">Discord</a>
+            <a href="https://www.tiktok.com/@wade_vr_" class="btn">TikTok</a>
+            <a href="https://discord.gg/NyK2Wnr7" class="btn">Discord</a>
         </div>
     </div>
 
