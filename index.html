@@ -98,6 +98,40 @@
         body {
             overflow-x: hidden;
         }
+
+        @media (max-width: 600px) {
+            body, html {
+                height: auto;
+                overflow: auto;
+            }
+
+            .container {
+                min-height: 100vh;
+                height: auto;
+                padding: 20px;
+            }
+
+            .links {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .btn {
+                font-size: 0.85em;
+                padding: 10px 20px;
+            }
+
+            .corner-banner {
+                font-size: 10px;
+                padding: 20px 55px;
+                top: 28px;
+                right: -70px;
+            }
+
+            p {
+                padding: 0 20px;
+            }
+        }
     </style>
 </head>
 <body>
